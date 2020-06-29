@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <title>Travello</title>
 <meta charset="utf-8">
@@ -293,7 +293,7 @@
 							<div class="destination_content">
 								<div class="destination_title"><a href="destinations.html">Paris</a></div>
 								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
+								<div class="destination_price">From ${{price}}</div>
 							</div>
 						</div>
 
@@ -466,7 +466,7 @@
 				<!-- News Sidebar -->
 				<div class="col-xl-4">
 					<div class="travello">
-						<div class="background_image" style="background-image:url(images/travello.jpg)"></div>
+						<div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
 						<div class="travello_content">
 							<div class="travello_content_inner">
 								<div></div>
@@ -532,7 +532,7 @@
 						<!-- Footer Contact Item -->
 						<div class="col-xl-4 footer_contact_col">
 							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg'%}" alt=""></div>
+								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}" alt=""></div>
 								<div class="footer_contact_title">come & drop by</div>
 								<div class="footer_contact_list">
 									<ul style="max-width:190px">
@@ -574,6 +574,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
 <script src="{% static 'plugins/easing/easing.js' %}"></script>
 <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
-<script src="{% static 'js/custom.js' %}>"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 </body>
 </html>

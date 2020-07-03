@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(vista.jpg);
+    height: 100vh;
+    background-size: cover;
+  }
+  .caja{
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    left: 50&;
+    top: 50%;
+
+    background: rgba(128, 128, 128, 0.3);
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .caja input[type="text"] , .caja input[type="Password"]{
+    border: 0;
+    width: 250px;
+    background: none;
+    display:inline-block;
+    margin: 1px auto;
+    text-align: center;
+    border: 1px solid #069;
+    padding: 5px 5px;
+    outline: none;
+    color: blue;
+    font-size: 1em;
+    border-radius: 10px;
+    transition: .3s;
+  }
+  .caja input[type="text"]:focus, .caja input[type="Password"]:focus{
+    width: 200px;
+    border-color: brown;
+  }
+  .caja input[type="submit"]{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 100px;
+    background: #de0c18;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .caja input[type="submit"]:hover{
+    background: #669;
+  }
+  .acceso{
+    color: white;
+    font-weight: bold;
+  }

@@ -1,21 +1,29 @@
+{% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Registeration</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'styles/estilo2.css' %}'>
+
   </head>
   <body>
     <center>
-      <form action="register" method="post">
-      {% csrf_token %}
-      <input type="text" name="first_name" placeholder="First Name"><br>
-      <input type="text" name="last_name" placeholder="Last Name"><br>
-      <input type="text" name="username" placeholder="UserName"><br>
-      <input type="email" name="email" placeholder="email"><br>
-      <input type="Password" name="password1" placeholder="Password"><br>
-      <input type="Password" name="password2" placeholder="Confirm Password"><br>
-      <input type="submit">
-    </form>
+      <div class="caja">
+        <form action="register" method="post">
+        {% csrf_token %}
+          <h1 class="acceso">REGISTRATE</h1>
+        <input type="text" name="first_name" placeholder="First Name"><br><br>
+        <input type="text" name="last_name" placeholder="Last Name"><br><br>
+        <input type="text" name="username" placeholder="UserName"><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <input type="Password" name="password1" placeholder="Password"><br><br>
+        <input type="Password" name="password2" placeholder="Confirm Password"><br><br>
+        <input type="submit">
+      </form>
+      </div>
+
 
     <div class="">
       {% for message in messages%}

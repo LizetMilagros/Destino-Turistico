@@ -1,11 +1,35 @@
+{% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Lista de contactos</title>
+    <title>Registeration</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static 'styles/estilo2.css' %}'>
+
   </head>
   <body>
-    <h1>template de listado</h1>
-    
+    <center>
+      <div class="caja">
+        <form action="register" method="post">
+        {% csrf_token %}
+          <h1 class="acceso">REGISTRATE</h1>
+        <input type="text" name="first_name" placeholder="First Name"><br><br>
+        <input type="text" name="last_name" placeholder="Last Name"><br><br>
+        <input type="text" name="username" placeholder="UserName"><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <input type="Password" name="password1" placeholder="Password"><br><br>
+        <input type="Password" name="password2" placeholder="Confirm Password"><br><br>
+        <input type="submit">
+      </form>
+      </div>
+
+
+    <div class="">
+      {% for message in messages%}
+      <h3> {{message}}</h3>
+      {% endfor %}
+    </div>
+    </center>
   </body>
 </html>

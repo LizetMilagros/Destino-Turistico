@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from  django.contrib  import messages
 from  django.contrib.auth.models import User , auth
 # Create your views here.
+
+def lista(request):
+    return render(request,'lista.html')
+
+
 def login(request):
     if request.method == 'POST':
 
@@ -59,12 +64,3 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
-    
-def lista(request):
-    #listado----------------------
-    destino = Destino.objects.all()
-    #print(persona)        #select * from Persona
-    contexto ={
-    'destino':destino
-    }
-    return render(request,'lista.html',contexto)

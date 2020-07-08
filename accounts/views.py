@@ -59,3 +59,12 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+    
+def lista(request):
+    #listado----------------------
+    destino = Destino.objects.all()
+    #print(persona)        #select * from Persona
+    contexto ={
+    'destino':destino
+    }
+    return render(request,'lista.html',contexto)

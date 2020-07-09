@@ -11,3 +11,6 @@ def lista(request):
     'destinos':destinos
     }
     return render(request,'lista.html', contexto)
+
+def añadir(request):
+    return render(request,'añadir.html')

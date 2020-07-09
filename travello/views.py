@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Destination
+from .forms import DestinoTuristico
 # Create your views here.
 def index(request):
     dest = Destination.objects.all()
@@ -13,4 +14,18 @@ def lista(request):
     return render(request,'lista.html', contexto)
 
 def añadir(request):
-    return render(request,'añadir.html')
+    if request.method == 'GET':
+        form = DestinoTuristico()
+        contexto ={
+        'form':form
+        }
+
+    else:
+        form = DestinoTuristico(request.POST)
+        contexto ={
+        'form':form
+        }
+        if form.is_valid():
+            form.save()
+            return redirect('lista')
+    return render(request,'añadir.html', contexto)

@@ -4,12 +4,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>lista</title>
+    <title>{% block titulo %}Lista de Destinos {% endblock titulo %}</title>
     <link rel='stylesheet' type='text/css' media='screen' href='{% static 'styles/estilo2.css' %}'>
 
   </head>
   <body>
     <center>
+      {% block cuerpo %}
     <h1>Lista de Destinos Turisticos</h1>
       <table border="2">
         <thead>
@@ -33,6 +34,7 @@
           {% endfor %}
         </tbody>
       </table>
+      {% endblock cuerpo %}
     </center>
   </body>
 </html>

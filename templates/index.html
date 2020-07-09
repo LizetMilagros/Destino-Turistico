@@ -32,7 +32,7 @@
 							<div class="logo"><a href="index.html">Travello</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
+									<li class="active"><a href="index">Home</a></li>
 
 									<!--<li><a href="about.html">About us</a></li>
 									<li><a href="#">Services</a></li>
@@ -42,6 +42,8 @@
 									{% if user.is_authenticated %}
 									<li>Hello, {{user.first_name}}</li>
 									<li><a href="lista">Menu</a></li>
+									<li><a href="añadir">Añadir</a></li>
+								
 									<li><a href="accounts/logout">Logout</a></li>
 
 									{% else %}

@@ -31,7 +31,7 @@
             <td>{{destino.desc}}</td>
             <td>{{destino.price}}</td>
             <td>{{destino.offer}}</td>
-            <td> <a href="{% url 'editar' destino.id %}">EDITAR</a> <a href="">ELIMINAR</a> </td>
+            <td> <a href="{% url 'editar' destino.id %}">EDITAR</a> <a href="{% url 'eliminar' destino.id %}">ELIMINAR</a> </td>
 
           </tr>
           {% endfor %}

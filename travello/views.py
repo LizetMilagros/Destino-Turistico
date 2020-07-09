@@ -35,7 +35,7 @@ def editar(request,id):
         form = DestinoTuristico(instance = destinos)
         contexto ={
         'form':form
-        } 
+        }
     else:
         form = DestinoTuristico(request.POST, instance = destinos)
         contexto ={
@@ -45,3 +45,9 @@ def editar(request,id):
             form.save()
             return redirect('lista')
     return render(request, 'añadir.html', contexto)
+
+def eliminar(request,id):
+    destinos = Destination.objects.get(id=id)
+    destinos.delete()
+
+    return redirect('lista')

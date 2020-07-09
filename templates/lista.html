@@ -9,7 +9,9 @@
 
   </head>
   <body>
-      <table>
+    <center>
+    <h1>Lista de Destinos Turisticos</h1>
+      <table border="2">
         <thead>
           <tr>
             <th>Nombre</th>
@@ -24,12 +26,13 @@
           <tr>
             <td>{{ destino.name }}</td>
             <td>{{ destino.img }}</td>
-            <td>{{ destino.desc }}</td>
-            <td>{{ destino.price }}</td>
-            <td>{{ destino.offer }}</td>
+            <td>{{destino.desc}}</td>
+            <td>{{destino.price}}</td>
+            <td>{{destino.offer}}</td>
           </tr>
           {% endfor %}
         </tbody>
       </table>
+    </center>
   </body>
 </html>

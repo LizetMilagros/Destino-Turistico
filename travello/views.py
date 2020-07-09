@@ -29,3 +29,19 @@ def añadir(request):
             form.save()
             return redirect('lista')
     return render(request,'añadir.html', contexto)
+def editar(request,id):
+    destinos = Destination.objects.get(id=id)
+    if request.method == 'GET':
+        form = DestinoTuristico(instance = destinos)
+        contexto ={
+        'form':form
+        } 
+    else:
+        form = DestinoTuristico(request.POST, instance = destinos)
+        contexto ={
+        'form':form
+        }
+        if form.is_valid():
+            form.save()
+            return redirect('lista')
+    return render(request, 'añadir.html', contexto)

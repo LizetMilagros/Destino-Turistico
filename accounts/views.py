@@ -1,11 +1,6 @@
 from django.shortcuts import render, redirect
 from  django.contrib  import messages
-from  django.contrib.auth.models import User , auth
-# Create your views here.
-
-def lista(request):
-    return render(request,'lista.html')
-
+from  django.contrib.auth.models import auth, User
 
 def login(request):
     if request.method == 'POST':

@@ -1,35 +1,35 @@
 {% load static %}
-{% static "images" as baseUrl %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registeration</title>
+    <title>lista</title>
     <link rel='stylesheet' type='text/css' media='screen' href='{% static 'styles/estilo2.css' %}'>
 
   </head>
   <body>
-    <center>
-      <div class="caja">
-        <form action="register" method="post">
-        {% csrf_token %}
-          <h1 class="acceso">REGISTRATE</h1>
-        <input type="text" name="first_name" placeholder="First Name"><br><br>
-        <input type="text" name="last_name" placeholder="Last Name"><br><br>
-        <input type="text" name="username" placeholder="UserName"><br><br>
-        <input type="email" name="email" placeholder="email"><br><br>
-        <input type="Password" name="password1" placeholder="Password"><br><br>
-        <input type="Password" name="password2" placeholder="Confirm Password"><br><br>
-        <input type="submit">
-      </form>
-      </div>
-
-
-    <div class="">
-      {% for message in messages%}
-      <h3> {{message}}</h3>
-      {% endfor %}
-    </div>
-    </center>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Oferta</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for destino in destinos %}
+          <tr>
+            <td>{{ destino.name }}</td>
+            <td>{{ destino.img }}</td>
+            <td>{{ destino.desc }}</td>
+            <td>{{ destino.price }}</td>
+            <td>{{ destino.offer }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
   </body>
 </html>

@@ -7,5 +7,5 @@ urlpatterns = [
     path('logout',views.logout, name='logout'),
 
     #path('lista',views.lista, name='lista'),
-    path('lista',views.lista, name='lista'),
+    
 ]
